@@ -25,6 +25,10 @@ body{
     "footer footer footer footer" ;
 }
 
+/* estilos del menu */
+.color-menu{
+    background-color:#9eaa3a;
+}
 .header{
     background-color:#9eaa3a;
     grid-area: header;
@@ -119,13 +123,15 @@ main{
     border: 100px;
 }
 .slide ul li{
+    background-color: tomato;
     display:inline-block;
     height: 5px;
 }
 /* estilos para contacto*/
 .contacto{
-    display:inline-block;
-    text-align: center;
+    display:flex; /*inline-block*/
+    justify-content: center;
+    align-items: center; /*text-align*/
 }
 .form{
     width: fit-content;
