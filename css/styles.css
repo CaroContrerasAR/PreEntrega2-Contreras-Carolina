@@ -12,26 +12,12 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-/* estilos del contenedor principal */
-.contenedor{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 0.3fr 0.7fr 1.5fr 0.3fr;
-    grid-template-areas:
-    "header header header header"
-    "uno uno uno uno"
-    "section section section section"
-    "footer footer footer footer" ;
-}
-
 /* estilos del menu */
 .color-menu{
     background-color:#9eaa3a;
 }
 .header{
     background-color:#9eaa3a;
-    grid-area: header;
     display: flex;
     position: sticky;   
     top: 0px;
@@ -60,6 +46,18 @@ body{
     text-transform: uppercase;
 }
 
+/* estilos del contenedor principal */
+.contenedor{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 0.3fr 0.7fr 1.5fr 0.3fr;
+    grid-template-areas:
+    "header header header header"
+    "uno uno uno uno"
+    "section section section section"
+    "footer footer footer footer" ;
+}
 /* estilos del home */
 main{
     width: 100vw;
@@ -138,7 +136,6 @@ main{
 }
 /* estilos para todos */
 footer{
-    grid-area: footer;
     text-align: center;
     padding: 1rem;
     margin:1px
