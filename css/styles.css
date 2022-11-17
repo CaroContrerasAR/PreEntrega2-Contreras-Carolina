@@ -51,7 +51,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns:1.5fr 1.5fr;
-    grid-template-rows: ;
+    grid-template-rows:1fr 1.5fr 1.5fr 1.5fr;
     grid-template-areas:
     "uno uno"
     "dos-img dos-p"
@@ -165,7 +165,7 @@ footer{
 }
 
 /* media query */
-@media screen and (min-width:576px){
+@media screen and (min-width:800px){
     .section{
         background-color: aqua;
         align-items: center;
