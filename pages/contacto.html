@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- link fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,400&display=swap" rel="stylesheet">
+    
+    <!-- link css -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header class="header">
+        <img src="../img/BattelloStudioLogo.png" alt="logo Battello Studio">
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../pages/sobremi.html">Sobre Mi</a>
+                </li>
+                <li>
+                    <a href="../pages/capacitacion.html">Capacitacion</a>
+                </li>
+                <li>
+                    <a href="../pages/galeria.html">Galeria</a>
+                </li>
+                <li>
+                    <a href="../pages/contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contacto">
+        <div>
+            <h2>Seguinos en las Redes</h2>
+            <div class="redes">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/battellostudio/" target="_blank">
+                            <img src="../img/Instagram.png" alt="Link Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/sandraesther.battello" target="_blank">
+                            <img src="../img/Facebook.png" alt="Link Facebook">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <h2>Visitanos en Santa Fe 3245 - Mar del Plata</h2>
+            <div>
+                <a href="https://www.google.com.ar/maps/place/Sta.+Fe+3245,+B7602CEI+Mar+del+Plata,+Provincia+de+Buenos+Aires/@-38.012521,-57.5547641,15z/data=!4m5!3m4!1s0x9584de9fbf729dc3:0xf19fef228af2528b!8m2!3d-38.0127408!4d-57.555043" target="_blank">Mira el mapa</a>
+            </div>
+            <br>
+        </div>
+        <div>
+            <form class="form">
+                <fieldset>
+                    <legend> Contacto </legend>
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="Nombre y Apellido" placeholder="Nombre y Apellido">
+                    </div>
+                    
+                    <div>
+                        <label for="e-mail">e-mail</label>
+                        <input type="email" name="e-mail" placeholder="mi_e-mail@yahoo.com.ar">
+                    </div>
+                    
+                    <div>
+                        <label for="asunto">Selecciona tipo de Consulta</label>
+                        <select name="asunto">
+                            <option value="entrenamientos">Entrenamientos</option>
+                            <option value="capacitaciones">Capacitaciones</option>
+                            <option value="otra">Otra Consulta</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="Consulta">Consulta</label>
+                        <textarea name="consulta" rows="20" cols="50">Aqui escribe tu Consulta.</textarea>
+                    </div>
+
+                    <div>
+                        <input type="submit"  value="ENVIAR">
+                        <input type="reset" value="BORRAR">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <footer>
+          <p>Todos los Derechos Reservados - Carolina Contreras</p>
+    </footer>
+</body>
+</html>
