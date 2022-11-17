@@ -71,7 +71,7 @@ main{
     align-items: center;
 }
 .uno h3{
-    font-style: italic;/*line-height: 20px;*/
+    font-style: italic;
 }
 .section{
     grid-area: section;
