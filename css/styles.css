@@ -50,16 +50,6 @@ body{
 .contenedor{
     height: 100vh;
     display: grid;
-<<<<<<< HEAD
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 0.3fr 0.7fr 1.5fr 0.3fr;
-    grid-template-areas:
-    "header header header header"
-    "uno uno uno uno"
-    "section section section section"
-    "footer footer footer footer" ;
-}
-=======
     grid-template-columns:1.5fr 1.5fr;
     grid-template-rows: ;
     grid-template-areas:
@@ -70,7 +60,6 @@ body{
     "footer footer" ;
 }
 
->>>>>>> rama-tres
 /* estilos del home */
 main{
     width: 100vw;
@@ -176,10 +165,7 @@ footer{
 }
 
 /* media query */
-@media screen and (max-width:400px){
-    /*.contenedor{
-        align-items: center;
-    }*/
+@media screen and (min-width:576px){
     .section{
         background-color: aqua;
         align-items: center;
