@@ -12,26 +12,12 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-/* estilos del contenedor principal */
-.contenedor{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 0.3fr 0.7fr 1.5fr 0.3fr;
-    grid-template-areas:
-    "header header header header"
-    "uno uno uno uno"
-    "section section section section"
-    "footer footer footer footer" ;
-}
-
 /* estilos del menu */
 .color-menu{
     background-color:#9eaa3a;
 }
 .header{
     background-color:#9eaa3a;
-    grid-area: header;
     display: flex;
     position: sticky;   
     top: 0px;
@@ -60,6 +46,20 @@ body{
     text-transform: uppercase;
 }
 
+/* estilos del contenedor principal */
+.contenedor{
+    height: 100vh;
+    display: grid;
+    grid-template-columns:1.5fr 1.5fr;
+    grid-template-rows: ;
+    grid-template-areas:
+    "uno uno"
+    "dos-img dos-p"
+    "tres-p tres-img"
+    "cuatro-img cuatro-p"
+    "footer footer" ;
+}
+
 /* estilos del home */
 main{
     width: 100vw;
@@ -67,7 +67,6 @@ main{
     align-items: center;
 }
 .uno{
-    grid-area: uno;
     text-align: center;
 }
 .uno h1{
@@ -77,21 +76,38 @@ main{
     font-style: italic;
 }
 .section{
-    grid-area: section;
-    /*display:inline-block;*/
     text-align: center;
 }
 .dos{
      font-size:24px ;
-     overflow: scroll;   
+     overflow: scroll;
+}
+.dos img{
+    grid-area: dos-img;
+}
+.dos p{
+    grid-area: dos-p;
 }
 .tres{
     font-size: 16px;
     overflow: auto;
 }
+.tres img{
+    grid-area: tres-img;
+}
+.tres p{
+    grid-area: tres-p;
+    text-align: center;
+}
 .cuatro{
     font-size: 26px;
     overflow: scroll;
+}
+.cuatro img{
+    grid-area: cuatro-img;
+}
+.cuaro p{
+    grid-area: cuatro-p;
 }
 .item-fixed{
     position:fixed;
@@ -120,12 +136,13 @@ main{
     background-color: rgb(148, 230, 126);
     margin: 5px;
     padding: 5px;
-    border: 100px;
+    border: 6rem;
 }
 .slide ul li{
     background-color: tomato;
     display:inline-block;
     height: 5px;
+    border: 6rem;
 }
 /* estilos para contacto*/
 .contacto{
@@ -149,6 +166,12 @@ footer{
 }
 
 /* media query */
-@media screen and (max-width:576px){
-
+@media screen and (max-width:400px){
+    /*.contenedor{
+        align-items: center;
+    }*/
+    .section{
+        background-color: aqua;
+        align-items: center;
+    }
 }
