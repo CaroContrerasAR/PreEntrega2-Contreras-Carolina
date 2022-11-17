@@ -16,6 +16,7 @@ body{
 .color-menu{
     background-color:#9eaa3a;
 }
+/*
 .header{
     background-color:#9eaa3a;
     display: flex;
@@ -45,7 +46,7 @@ body{
     color:beige;
     text-transform: uppercase;
 }
-
+*/
 /* estilos del contenedor principal */
 .contenedor{
     height: 100vh;
@@ -165,7 +166,7 @@ footer{
 }
 
 /* media query */
-@media screen and (min-width:800px){
+@media screen and (min-width:0px) and (max-width:800px){
     .section{
         background-color: aqua;
         align-items: center;
