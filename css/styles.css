@@ -5,38 +5,66 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* estilos generales */
 body{
 	overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
 }
+
+/* estilos del contenedor principal */
+.contenedor{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 0.3fr 0.7fr 1.5fr 0.3fr;
+    grid-template-areas:
+    "header header header header"
+    "uno uno uno uno"
+    "section section section section"
+    "footer footer footer footer" ;
+}
+
+
 .header{
     background-color:#9eaa3a;
+    grid-area: header;
+    display: flex;
     position: sticky;   
     top: 0px;
+    justify-content: space-around;
+    align-items: center;
 }
 .header img{
-    padding: 10px;
+    padding: 0.1rem;
 }
-.header nav{
-    position: relative;
-    bottom: 70px;
-    left: 350px;
-}
+
 .header nav ul{
+    display: flex;
+    gap: 1rem;
     list-style: none;
 }
-.header nav ul li{
-    display:inline-block;
-    width: 15%;
-    font: size 16px;
+
+/* animacion menu */
+.header nav ul li:hover{
+    transform: scale(0.9);
+    text-decoration: underline;
 }
+
 .header nav ul li a{
     text-decoration: none;
     color:beige;
     text-transform: uppercase;
 }
+
 /* estilos del home */
+main{
+    width: 100vw;
+    justify-content:center;
+    align-items: center;
+}
 .uno{
+    grid-area: uno;
     text-align: center;
 }
 .uno h1{
@@ -46,7 +74,8 @@ body{
     font-style: italic;/*line-height: 20px;*/
 }
 .section{
-    display:inline-block;
+    grid-area: section;
+    /*display:inline-block;*/
     text-align: center;
 }
 .dos{
@@ -64,7 +93,22 @@ body{
 .item-fixed{
     position:fixed;
     bottom: 0;
-    right: 0;
+    right: 0;    
+}
+
+/* animacion de img */
+.item-fixed img{
+    animation-name: img-mov;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+@keyframes img-mov {
+    to{
+        transform: scale(0.9);
+    }
+    from{
+        transform: scale(1);
+    }
 }
 
 /* estilos de Sobre Mi, Capacitacion  */
@@ -89,9 +133,17 @@ body{
 }
 /* estilos para todos */
 footer{
+    grid-area: footer;
     text-align: center;
+    padding: 1rem;
+    margin:1px
 }
 .redes ul li{
     display:inline-block;
     width:fit-content;
+}
+
+/* media query */
+@media screen and (max-width:576px){
+
 }
