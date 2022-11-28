@@ -1,177 +1,123 @@
-
 /* reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* estilos de Sobre Mi, Capacitacion*/
+.fotos ul li, .videos ul li, .profe ul li, .slide ul li {
+  display: inline-block;
+  background-color: #94e67e;
+  margin: 5px;
+  padding: 5px;
+  border: 6rem; }
 
 /* estilos generales */
-body{
-	overflow-x: hidden;
-    font-family: 'Roboto', sans-serif;
-}
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif; }
 
-/* estilos del menu */
-.color-menu{
-    background-color:#9eaa3a;
-}
-/*
+/* estilos del menu para BT */
+.color-menu {
+  background-color: #9eaa3a; }
+
+/* se cambia a BT
 .header{
-    background-color:#9eaa3a;
+    background-color: $colorMenu;
     display: flex;
-    position: sticky;   
+    position: sticky;
     top: 0px;
     justify-content: space-around;
     align-items: center;
-}
-.header img{
-    padding: 0.1rem;
-}
-
-.header nav ul{
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-}
-
-/* animacion menu */
-.header nav ul li:hover{
-    transform: scale(0.9);
-    text-decoration: underline;
-}
-
-.header nav ul li a{
-    text-decoration: none;
-    color:beige;
-    text-transform: uppercase;
+    img{
+        padding: 0.1rem;
+    }
+    nav ul{
+        display:flex;
+    }
+    // animacion menu
+    nav ul li:hover{
+        transform: scale(0.9);
+        text-decoration: underline;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color:$colorMenu2;
+    }
 }
 */
-/* estilos del contenedor principal */
-.contenedor{
-    height: 100vh;
-    display: grid;
-    grid-template-columns:1.5fr 1.5fr;
-    grid-template-rows:1fr 1.5fr 1.5fr 1.5fr;
-    grid-template-areas:
-    "uno uno"
-    "dos-img dos-p"
-    "tres-p tres-img"
-    "cuatro-img cuatro-p"
-    "footer footer" ;
-}
+/* estilos del contenedor principal*/
+.contenedor {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr;
+  grid-template-rows: 1fr 1.5fr 1.5fr 1.5fr;
+  grid-template-areas: "uno uno" "dos-img dos-p" "tres-p tres-img" "cuatro-img cuatro-p"; }
 
 /* estilos del home */
-main{
-    width: 100vw;
-    justify-content:center;
-    align-items: center;
-}
-.uno{
-    text-align: center;
-}
-.uno h1{
-    align-items: center;
-}
-.uno h3{
-    font-style: italic;
-}
-.section{
-    text-align: center;
-}
-.dos{
-     font-size:24px ;
-     overflow: scroll;
-}
-.dos img{
-    grid-area: dos-img;
-}
-.dos p{
-    grid-area: dos-p;
-}
-.tres{
+main {
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  main .uno {
+    grid-area: uno; }
+    main .uno h3 {
+      font-style: italic; }
+  main section .dos {
+    font-size: 24px;
+    overflow: scroll; }
+    main section .dos img {
+      grid-area: dos-img; }
+    main section .dos p {
+      grid-area: dos-p; }
+  main section .tres {
     font-size: 16px;
-    overflow: auto;
-}
-.tres img{
-    grid-area: tres-img;
-}
-.tres p{
-    grid-area: tres-p;
-    text-align: center;
-}
-.cuatro{
+    overflow: auto; }
+    main section .tres img {
+      grid-area: tres-img; }
+    main section .tres p {
+      grid-area: tres-p; }
+  main section .cuatro {
     font-size: 26px;
-    overflow: scroll;
-}
-.cuatro img{
-    grid-area: cuatro-img;
-}
-.cuaro p{
-    grid-area: cuatro-p;
-}
-.item-fixed{
-    position:fixed;
-    bottom: 0;
-    right: 0;    
-}
+    overflow: scroll; }
+    main section .cuatro img {
+      grid-area: cuatro-img; }
+    main section .cuatro p {
+      grid-area: cuatro-p; }
 
-/* animacion de img */
-.item-fixed img{
-    animation-name: img-mov;
-    animation-iteration-count: infinite;
-    animation-duration: 3s;
-}
-@keyframes img-mov {
-    to{
-        transform: scale(0.9);
-    }
-    from{
-        transform: scale(1);
-    }
-}
-
-/* estilos de Sobre Mi, Capacitacion  */
-.fotos ul li, .videos ul li, .profe ul li{
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin: 1px; }
+  footer .redes ul li {
     display: inline-block;
-    background-color: rgb(148, 230, 126);
-    margin: 5px;
-    padding: 5px;
-    border: 6rem;
-}
-.slide ul li{
-    background-color: tomato;
-    display:inline-block;
-    height: 5px;
-    border: 6rem;
-}
-/* estilos para contacto*/
-.contacto{
-    display:flex; /*inline-block*/
-    justify-content: center;
-    align-items: center; /*text-align*/
-}
-.form{
-    width: fit-content;
-}
-/* estilos para todos */
-footer{
-    text-align: center;
-    padding: 1rem;
-    margin:1px
-}
-.redes ul li{
-    display:inline-block;
-    width:fit-content;
-}
+    width: fit-content; }
+  footer .redes .item-fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0; }
+    footer .redes .item-fixed img {
+      animation-name: img-mov;
+      animation-iteration-count: infinite;
+      animation-duration: 3s; }
+
+@keyframes img-mov {
+  to {
+    transform: scale(0.9); }
+  from {
+    transform: scale(1); } }
+
+/* estilos de contactos */
+.contacto {
+  display: none;
+  display: inline-block;
+  justify-content: center;
+  align-items: center; }
 
 /* media query */
-@media  (max-width:576px){
-    .section{
-        background-color: aqua;
-        align-items: center;
-    }
-    .redes{
-        display: none;
-    }
-}
+@media (max-width: 576px) {
+  .section {
+    background-color: aqua;
+    align-items: center; }
+  .redes {
+    display: none; } }
