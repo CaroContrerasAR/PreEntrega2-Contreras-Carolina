@@ -19,9 +19,9 @@ body{
 .color-menu{
     background-color: $colorMenu;
 }
-/* se cambia a BT
+// se cambia a BT
 .header{
-    background-color: $colorMenu;
+    //background-color: $colorMenu;
     display: flex;
     position: sticky;
     top: 0px;
@@ -34,20 +34,20 @@ body{
         display:flex;
     }
     // animacion menu
-    nav ul li:hover{
+   /* nav ul li:hover{
         transform: scale(0.9);
         text-decoration: underline;
     }
     nav ul li a{
         text-decoration: none;
         color:$colorMenu2;
-    }
+    }*/
 }
-*/
+
 
 /* estilos del contenedor principal*/
 .contenedor{
-    //height: 100vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1.5fr 1.5fr;
     grid-template-rows: 1fr 1.5fr 1.5fr 1.5fr;
@@ -55,7 +55,8 @@ body{
     "uno uno"
     "dos-img dos-p"
     "tres-p tres-img"
-    "cuatro-img cuatro-p";
+    "cuatro-img cuatro-p"
+    "footer footer";
 }
 
 /* estilos del home */
@@ -107,6 +108,7 @@ main{
 }
 
 footer{
+    grid-area: footer;
     text-align: center;
     padding: 1rem;
     margin: 1px;
@@ -152,10 +154,12 @@ footer{
 }
 /* estilos de contactos */
 .contacto{
-    display:none;
-    display: inline-block;
+    display: flex;
     justify-content: center;
     align-items: center;
+    ul li{
+        display:inline-block;   
+    }
 }
 /* media query */
 @media  (max-width:576px){
