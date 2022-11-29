@@ -50,7 +50,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: 1.5fr 1.5fr;
-    grid-template-rows: 1fr 1.5fr 1.5fr 1.5fr;
+    grid-template-rows: 1fr 1.5fr 1.5fr 0.5fr;
     grid-template-areas: 
     "uno uno"
     "dos-img dos-p"
