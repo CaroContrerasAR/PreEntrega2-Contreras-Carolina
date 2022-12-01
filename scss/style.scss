@@ -21,27 +21,15 @@ body{
 }
 // se cambia a BT
 .header{
-    //background-color: $colorMenu;
     display: flex;
     position: sticky;
     top: 0px;
-    justify-content: space-around;
-    align-items: center;
     img{
         padding: 0.1rem;
     }
     nav ul{
         display:flex;
-    }
-    // animacion menu
-   /* nav ul li:hover{
-        transform: scale(0.9);
-        text-decoration: underline;
-    }
-    nav ul li a{
-        text-decoration: none;
-        color:$colorMenu2;
-    }*/
+    }    
 }
 
 
@@ -49,8 +37,8 @@ body{
 .contenedor{
     height: 100vh;
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr;
-    grid-template-rows: 1fr 1.5fr 1.5fr 0.5fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
     grid-template-areas: 
     "uno uno"
     "dos-img dos-p"
@@ -63,13 +51,27 @@ body{
 main{
     width: 100vw;
     justify-content: center;
-    align-items: center;
+    //align-items:flex-start;
     text-align: center;
     .uno{
         grid-area: uno;
-        //text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
         h3{
+            color: $colorMenu;
+            span{
+                display:block;
+            }
+        }
+        p{  
+            text-align:justify;
             font-style: italic;
+            padding: 1rem;
+            span{
+                display: block;
+            } 
         }
     }
     section{
@@ -82,6 +84,7 @@ main{
             }
             p{
                 grid-area: dos-p;
+                padding: 1rem;
             }
         }
         .tres{
@@ -92,6 +95,7 @@ main{
             }
             p{
                 grid-area: tres-p;
+                padding: 1rem;
             }
         }
         .cuatro{
@@ -102,6 +106,7 @@ main{
             }
             p{
                 grid-area: cuatro-p;
+                padding: 1rem;
             }
         }
     }
@@ -109,15 +114,18 @@ main{
 
 footer{
     grid-area: footer;
-    text-align: center;
-    padding: 1rem;
+    width: 100vw;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
     margin: 1px;
     .redes{
         ul li{
             display: inline-block;
-            width: fit-content;
+            margin: 1rem;
         }
-
         .item-fixed{
             position: fixed;
             bottom: 0;
@@ -158,7 +166,8 @@ footer{
     justify-content: center;
     align-items: center;
     ul li{
-        display:inline-block;   
+        display:inline-block;
+        margin: 1rem;   
     }
 }
 /* media query */

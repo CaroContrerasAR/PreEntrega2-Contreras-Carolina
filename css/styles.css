@@ -7,7 +7,7 @@
 /* estilos de Sobre Mi, Capacitacion*/
 .fotos ul li, .videos ul li, .profe ul li, .slide ul li {
   display: inline-block;
-  background-color: #94e67e;
+  background-color: #9aa556;
   margin: 5px;
   padding: 5px;
   border: 6rem; }
@@ -24,17 +24,7 @@ body {
 .header {
   display: flex;
   position: sticky;
-  top: 0px;
-  justify-content: space-around;
-  align-items: center;
-  /* nav ul li:hover{
-        transform: scale(0.9);
-        text-decoration: underline;
-    }
-    nav ul li a{
-        text-decoration: none;
-        color:$colorMenu2;
-    }*/ }
+  top: 0px; }
   .header img {
     padding: 0.1rem; }
   .header nav ul {
@@ -44,50 +34,68 @@ body {
 .contenedor {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr;
-  grid-template-rows: 1fr 1.5fr 1.5fr 0.5fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
   grid-template-areas: "uno uno" "dos-img dos-p" "tres-p tres-img" "cuatro-img cuatro-p" "footer footer"; }
 
 /* estilos del home */
 main {
   width: 100vw;
   justify-content: center;
-  align-items: center;
   text-align: center; }
   main .uno {
-    grid-area: uno; }
+    grid-area: uno;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem; }
     main .uno h3 {
-      font-style: italic; }
+      color: #9eaa3a; }
+      main .uno h3 span {
+        display: block; }
+    main .uno p {
+      text-align: justify;
+      font-style: italic;
+      padding: 1rem; }
+      main .uno p span {
+        display: block; }
   main section .dos {
     font-size: 24px;
     overflow: scroll; }
     main section .dos img {
       grid-area: dos-img; }
     main section .dos p {
-      grid-area: dos-p; }
+      grid-area: dos-p;
+      padding: 1rem; }
   main section .tres {
     font-size: 16px;
     overflow: auto; }
     main section .tres img {
       grid-area: tres-img; }
     main section .tres p {
-      grid-area: tres-p; }
+      grid-area: tres-p;
+      padding: 1rem; }
   main section .cuatro {
     font-size: 26px;
     overflow: scroll; }
     main section .cuatro img {
       grid-area: cuatro-img; }
     main section .cuatro p {
-      grid-area: cuatro-p; }
+      grid-area: cuatro-p;
+      padding: 1rem; }
 
 footer {
   grid-area: footer;
-  text-align: center;
-  padding: 1rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
   margin: 1px; }
   footer .redes ul li {
     display: inline-block;
-    width: fit-content; }
+    margin: 1rem; }
   footer .redes .item-fixed {
     position: fixed;
     bottom: 0;
@@ -109,12 +117,13 @@ footer {
   justify-content: center;
   align-items: center; }
   .contacto ul li {
-    display: inline-block; }
+    display: inline-block;
+    margin: 1rem; }
 
 /* media query */
 @media (max-width: 576px) {
   .section {
-    background-color: aqua;
+    background-color: #d3dd9c;
     align-items: center; }
   .redes {
     display: none; } }
