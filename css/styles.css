@@ -50,8 +50,10 @@ main {
     align-items: center;
     font-size: 1rem;
     padding: 0.5rem; }
+    main .uno div {
+      background-color: #798242; }
     main .uno h3 {
-      color: #9aa556; }
+      color: beige; }
       main .uno h3 span {
         display: block; }
     main .uno p {

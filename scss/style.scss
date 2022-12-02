@@ -63,8 +63,11 @@ main{
         align-items: center;
         font-size: 1rem;
         padding: 0.5rem;
+        div{
+            background-color: $colorMenu3;
+        }
         h3{
-            color: $colorMenu3;
+            color: $colorMenu2;
             span{
                 display:block;
             }
