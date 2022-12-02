@@ -122,10 +122,8 @@ main{
 footer{
     grid-area: footer;
     width: 100vw;
-    display: flex;
+    @include flex;
     flex-direction:column;
-    justify-content: center;
-    align-items: center;
     padding: 2rem;
     margin: 1px;
     .redes{
@@ -169,9 +167,7 @@ footer{
 }
 /* estilos de contactos */
 .contacto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex;
     ul li{
         display:inline-block;
         margin: 1rem;   
