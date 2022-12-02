@@ -34,23 +34,24 @@ body {
 .contenedor {
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: "uno uno" "dos-img dos-p" "tres-p tres-img" "cuatro-img cuatro-p" "footer footer"; }
 
 /* estilos del home */
 main {
   width: 100vw;
-  justify-content: center;
   text-align: center; }
   main .uno {
     grid-area: uno;
+    display: block;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1rem; }
+    font-size: 1rem;
+    padding: 0.5rem; }
     main .uno h3 {
-      color: beige; }
+      color: #9aa556; }
       main .uno h3 span {
         display: block; }
     main .uno p {
@@ -59,30 +60,32 @@ main {
       padding: 1rem; }
       main .uno p span {
         display: block; }
-  main section .dos {
-    font-size: 24px;
-    overflow: scroll; }
-    main section .dos img {
-      grid-area: dos-img; }
-    main section .dos p {
-      grid-area: dos-p;
-      padding: 1rem; }
-  main section .tres {
-    font-size: 16px;
-    overflow: auto; }
-    main section .tres img {
-      grid-area: tres-img; }
-    main section .tres p {
-      grid-area: tres-p;
-      padding: 1rem; }
-  main section .cuatro {
-    font-size: 26px;
-    overflow: scroll; }
-    main section .cuatro img {
-      grid-area: cuatro-img; }
-    main section .cuatro p {
-      grid-area: cuatro-p;
-      padding: 1rem; }
+  main section {
+    text-align: center; }
+    main section .dos {
+      font-size: 24px;
+      overflow: scroll; }
+      main section .dos img {
+        grid-area: dos-img; }
+      main section .dos p {
+        grid-area: dos-p;
+        padding: 1rem; }
+    main section .tres {
+      font-size: 16px;
+      overflow: auto; }
+      main section .tres img {
+        grid-area: tres-img; }
+      main section .tres p {
+        grid-area: tres-p;
+        padding: 1rem; }
+    main section .cuatro {
+      font-size: 26px;
+      overflow: scroll; }
+      main section .cuatro img {
+        grid-area: cuatro-img; }
+      main section .cuatro p {
+        grid-area: cuatro-p;
+        padding: 1rem; }
 
 footer {
   grid-area: footer;
@@ -121,6 +124,11 @@ footer {
     margin: 1rem; }
 
 /* media query */
+@media (max-width: 768px) {
+  .section {
+    background-color: beige;
+    align-items: center; } }
+
 @media (max-width: 576px) {
   .section {
     background-color: #d3dd9c;

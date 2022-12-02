@@ -37,30 +37,34 @@ body{
 .contenedor{
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "uno uno"
     "dos-img dos-p"
     "tres-p tres-img"
     "cuatro-img cuatro-p"
     "footer footer";
+    //justify-content: center;
+    //justify-items: center;      
 }
 
 /* estilos del home */
 main{
     width: 100vw;
-    justify-content: center;
+    //justify-content: center;
     //align-items:flex-start;
     text-align: center;
     .uno{
         grid-area: uno;
+        display: block;
         display: flex;
         flex-direction: column;
         align-items: center;
         font-size: 1rem;
+        padding: 0.5rem;
         h3{
-            color: $colorMenu2;
+            color: $colorMenu3;
             span{
                 display:block;
             }
@@ -75,7 +79,7 @@ main{
         }
     }
     section{
-        //text-align: center;
+        text-align: center;
         .dos{
             font-size: 24px;
             overflow: scroll;
@@ -171,6 +175,13 @@ footer{
     }
 }
 /* media query */
+@media  (max-width:768px){
+    .section{
+        background-color: $colorMenu2;
+        align-items: center;
+    }
+    
+}
 @media  (max-width:576px){
     .section{
         background-color: $colorMQ;
